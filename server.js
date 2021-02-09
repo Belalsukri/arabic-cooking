@@ -5,7 +5,7 @@ const dataModule = require('./modules/mongooseDataModule')
 const fs = require('fs')
 const app=express();
 const path =require('path')
-app.use(express.static(__dirname + 'client/build'))
+
 app.use(express.urlencoded({extended: false}))
 app.use(express.json());
 
@@ -129,14 +129,14 @@ app.post('/bloger',(req,res)=>{
  })
  
 })
-
-// app.get('*',(req,res)=>{
-//     res.sendFile(path.resolve(__dirname,'/client/public/public','index.html'))
-// })
-app.use('/',(req,res)=>{
-    const html =fs.readFileSync(__dirname+'/client/build/index.html','utf-8')
-    res.send(html)
+app.use(express.static('public'))
+app.get('*',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'public','index.html'))
 })
+// app.use('/',(req,res)=>{
+//     const html =fs.readFileSync(__dirname+'/client/build/index.html','utf-8')
+//     res.send(html)
+// })
 
 app.listen(port,()=>{
     console.log(`App listening on port ${port}!`);
