@@ -130,13 +130,13 @@ app.post('/bloger',(req,res)=>{
  
 })
 
-app.get('*',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'/client/public/public','index.html'))
-})
-// app.use('/',(req,res)=>{
-//     const html =fs.readFileSync(__dirname+'/client/public/index.html','utf-8')
-//     res.send(html)
+// app.get('*',(req,res)=>{
+//     res.sendFile(path.resolve(__dirname,'/client/public/public','index.html'))
 // })
+app.use('/',(req,res)=>{
+    const html =fs.readFileSync(__dirname+'/client/public/index.html','utf-8')
+    res.send(html)
+})
 
 app.listen(port,()=>{
     console.log(`App listening on port ${port}!`);
