@@ -131,7 +131,7 @@ app.post('/bloger',(req,res)=>{
 })
 app.use(express.static('public'))
 app.get('*',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'public','index.html'))
+    res.sendFile(path.resolve(__dirname,'/client/public','index.html'))
 })
 // app.use('/',(req,res)=>{
 //     const html =fs.readFileSync(__dirname+'/client/build/index.html','utf-8')
