@@ -4,7 +4,7 @@ const cookie = require('cookie-parser')
 const dataModule = require('./modules/mongooseDataModule')
 const fs = require('fs')
 const app=express();
-
+const path =require('path')
 app.use(express.static(__dirname + 'client/public'))
 app.use(express.urlencoded({extended: false}))
 app.use(express.json());
@@ -131,7 +131,7 @@ app.post('/bloger',(req,res)=>{
 })
 
 app.use('/',(req,res)=>{
-    const html =fs.readFileSync(__dirname+'/client/index.html','utf-8')
+    const html =fs.readFileSync(__dirname+'/client/public/index.html','utf-8')
     res.send(html)
 })
 
