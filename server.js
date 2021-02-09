@@ -130,6 +130,11 @@ app.post('/bloger',(req,res)=>{
  
 })
 
+app.use('/',(req,res)=>{
+    const html =fs.readFileSync(__dirname+'/client/index.html','utf-8')
+    res.send(html)
+})
+
 app.listen(port,()=>{
     console.log(`App listening on port ${port}!`);
 })
