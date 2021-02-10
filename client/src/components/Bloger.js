@@ -11,7 +11,7 @@ const Bloger = ()=> {
       const params = useParams()
      
       console.log(params._id);
-      const kategori=params.kategori
+      
       useEffect(()=>{
           
         blogerPost(params._id).then(data=>{
@@ -75,9 +75,9 @@ const Bloger = ()=> {
                 </h3>
                 <div className=" col-md-8 ml-auto mr-auto ">
                 
-                {state.bloger.urlVideo!='undefined' ?
+                {state.bloger.urlVideo!=='undefined' ?
                     <div class="embed-responsive embed-responsive-4by3 img-blog" >
-                    <iframe  class="embed-responsive-item" height="80%"  src={state.bloger.urlVideo} frameborder="0" allow="accelerometer; autoplay;
+                    <iframe title="myFrame" class="embed-responsive-item" height="80%"  src={state.bloger.urlVideo} frameborder="0" allow="accelerometer; autoplay;
                      clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div> :
                     <Link to=''>

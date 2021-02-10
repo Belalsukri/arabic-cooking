@@ -11,7 +11,7 @@ const Kategori = ()=> {
       const params = useParams()
      
       console.log(params.kategori);
-      const kategori=params.kategori
+     
       useEffect(()=>{
           
         katgoriePost(params.kategori).then(data=>{

@@ -8,8 +8,11 @@ const path =require('path')
 
 app.use(express.urlencoded({extended: false}))
 app.use(express.json());
-
+app.use(express.static(__dirname + '/client/build'))
 const port = process.env.PORT || 5000;
+app.listen(port,()=>{
+    console.log(`App listening on port ${port}!`);
+})
 app.use(cookie());
 app.use(fileupload({
     limits: { fileSize: 50 * 1024 * 1024 }
@@ -129,15 +132,12 @@ app.post('/bloger',(req,res)=>{
  })
  
 })
-app.use(express.static('public'))
-app.get('*',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'/client/public','index.html'))
-})
-// app.use('/',(req,res)=>{
-//     const html =fs.readFileSync(__dirname+'/client/build/index.html','utf-8')
-//     res.send(html)
+// app.use(express.static('public'))
+// app.get('*',(req,res)=>{
+//     res.sendFile(path.resolve(__dirname,'/client/public','index.html'))
 // })
+app.use('/',(req,res)=>{
+    const html =fs.readFileSync(__dirname+'/client/build/index.html','utf-8')
+    res.send(html)
+ })
 
-app.listen(port,()=>{
-    console.log(`App listening on port ${port}!`);
-})

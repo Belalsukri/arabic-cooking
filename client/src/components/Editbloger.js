@@ -2,7 +2,7 @@ import React,{useState,useEffect,useRef} from 'react'
 import {getBlogPost,updateBlog} from '../services/api'
 
 import { Editor } from '@tinymce/tinymce-react';
-import {Link,useParams,useHistory} from 'react-router-dom'
+import {useParams,useHistory} from 'react-router-dom'
 
 
 const Editbloger = () => {

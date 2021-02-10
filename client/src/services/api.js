@@ -10,7 +10,7 @@ fd.append('textarea', textarea)
 for (let i = 0; i < imgs.length; i++) {
     fd.append('imgs' + i, imgs[i])
 }
-   if (urlVideo !='') {
+   if (urlVideo !=='') {
     fd.append('urlVideo', urlVideo)
    } else {
     fd.append('urlVideo', 'undefined')
