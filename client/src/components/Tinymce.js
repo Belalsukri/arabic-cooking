@@ -40,10 +40,10 @@ import { Editor } from '@tinymce/tinymce-react';
                 }}
 
                   apiKey='wt8d5rcrexduz1zs6s5ck57ss7u6vwz3p4z5fpavlymw1wmg'
-                  tinymceScriptSrc='/path/to/tinymce.min.js'
+                  
                   initialValue='Once upon a time...'
                 // outputFormat='text'
-                tinymceScriptSrc='/path/to/tinymce.min.js'
+                
                 value=''
                 onEditorChange={this.handleEditorChange}
                 
