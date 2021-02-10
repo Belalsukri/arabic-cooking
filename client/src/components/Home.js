@@ -140,6 +140,7 @@ const Home = ()=> {
                 disabledClassName={"pagDisanled"}
                 activeClassName={"activBtn"}
 
+                
                 />
                 <section>
                 <div className="section section-contacts mb-5 " id="contact_me">

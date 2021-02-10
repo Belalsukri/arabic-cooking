@@ -8,7 +8,7 @@ const path =require('path')
 
 app.use(express.urlencoded({extended: false}))
 app.use(express.json());
-//app.use(express.static(__dirname + '/client/build'))
+// app.use(express.static(__dirname + '/client/public'))
 const port = process.env.PORT || 4000;
 app.listen(port,()=>{
     console.log(`App listening on port ${port}!`);
@@ -140,13 +140,13 @@ app.post('/bloger',(req,res)=>{
 //     const html =fs.readFileSync(__dirname+'/client/puild/index.html','utf-8')
 //     res.send(html)
 //  })
- app.use(express.static(path.join(__dirname, '/client/build')));
+ app.use(express.static(path.join(__dirname, '/client/public')));
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, '/client/public', 'index.html'));
 });
 // app.use('/',(req,res)=>{
-//         const html =fs.readFileSync(__dirname+'/client/puild/index.html','utf-8')
+//         const html =fs.readFileSync(__dirname+'/client/public/index.html','utf-8')
 //         res.send(html)
 //      })
 

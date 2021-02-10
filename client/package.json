@@ -43,21 +43,5 @@
       "last 1 safari version"
     ]
   },
- 
-  " buildpacks " : [
-    {
-      " url " : " mars / create-react-app "
-    }
-    
-  ],
-  
-    " proxy " : {
-      " / api " : {
-        " target " : "http://localhost:4000",
-        " pathRewrite " : {
-          " ^ / api " : " / "
-       }
-     }
-   }
- 
+  "proxy": "http://localhost:4000"
 }
