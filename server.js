@@ -140,10 +140,11 @@ app.post('/bloger',(req,res)=>{
 //     const html =fs.readFileSync(__dirname+'/client/puild/index.html','utf-8')
 //     res.send(html)
 //  })
- app.use(express.static(path.join(__dirname, '/client/public')));
+ app.use(express.static(path.join(__dirname, '/client/build')));
 
-app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, '/client/public', 'index.html'));
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+
 });
 // app.use('/',(req,res)=>{
 //         const html =fs.readFileSync(__dirname+'/client/public/index.html','utf-8')

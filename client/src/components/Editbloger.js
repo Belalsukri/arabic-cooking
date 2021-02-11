@@ -6,7 +6,6 @@ import {useParams,useHistory} from 'react-router-dom'
 
 
 const Editbloger = () => {
-    
     const history=useHistory()
     const imagesFileInpRef = useRef()
     const oldimg = useRef()

@@ -12,8 +12,6 @@ const Navigation = () => {
      
       
          setState({...state,bloger:data})
-      
-
   })
   }, [])
   const linkkategorie =state.bloger.map(blog =>{
