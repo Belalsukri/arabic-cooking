@@ -44,7 +44,7 @@ const Kategori = ()=> {
             <div className="row">
               <div className="col-md-5">
                 <div className="card-header card-header-image">
-                {blog.urlVideo!='undefined' ?
+                {blog.urlVideo!=='undefined' ?
                     <div class="embed-responsive embed-responsive-4by3" >
                     <iframe  class="embed-responsive-item" height="80%"  src={blog.urlVideo} frameborder="0" allow="accelerometer; autoplay;
                      clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

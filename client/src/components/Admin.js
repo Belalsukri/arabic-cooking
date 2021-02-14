@@ -121,10 +121,10 @@ const Admin = () => {
       </ConfirmModal>
         <div className="container-fluid backg">
       <div className="row  ">
-        <div className="row p-2 pl-5 col-sm-12 col-md-9 col-lg-12 mt-5">
+        <div className="row  col-sm-12  col-lg-12 mt-5">
             <h3 className="col-sm-12 text-white mt-auto p-2 d-flex justify-content-center my pt-4">مرحبا بكم في صفحتك الشخصية</h3>
             <div className="col-sm-12 mr-5">
-                <h3><span className=" badge badge-dark"><a href="/addBloger" className="badge badge-dark"> اضافه  مقال  جديد....</a></span></h3>    
+                <h3><span className="p-3 badge badge-dark"><a href="/addBloger" className="badge badge-dark"> اضافه  مقال  جديد....</a></span></h3>    
                   
             </div>
             
@@ -133,7 +133,7 @@ const Admin = () => {
                   <div className="container-fluid">  
                   
                 
-                    <h4> SIe haben keine Product</h4>
+                   
                               {BlogersElement}
                     </div>
                     <div className="col-12">

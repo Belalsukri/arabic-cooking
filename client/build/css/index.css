@@ -9,7 +9,7 @@
   }
   .active{
     border-bottom:solid 2px #d7ae78;
-    background-color:#e3cb9f73;
+    background-color:#253b8c73;
   }
   .pagBtn{
     width: 80px;
@@ -361,13 +361,15 @@
         
         }
         
-       
+       .hiden{
+         display: none !important;
+       }
 
         .backgrund-1{
-          background-image: none;
-          background-size: 100% 120%;
+         
+          background-size: 108% 100%;
           background-repeat: no-repeat;
-          background-position-x: center;
+          background-position:bottom center;
          background-color: #4a4949;
        }
        p{

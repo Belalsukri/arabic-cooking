@@ -3,9 +3,6 @@ import {allBlogerPost} from '../services/api';
 import {Link} from 'react-router-dom';
 import ReactPaginate from 'react-paginate';
 import parse from "html-react-parser"
-import { renderToString } from 'react-dom/server'
-
-
 const Home = ()=> {
     
     const intialState={

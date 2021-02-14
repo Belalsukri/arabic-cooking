@@ -3549,13 +3549,11 @@ input[type="button"].btn-block {
   opacity: 1;
 }
 
-.collapse {
-  display: none;
-}
 
-.collapse.show {
+
+/* .collapse.show {
   display: block;
-}
+} */
 
 tr.collapse.show {
   display: table-row;
@@ -4387,6 +4385,7 @@ tbody.collapse.show {
 .navbar-nav {
   display: flex;
   flex-direction: column;
+  top: -7px;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
@@ -14695,6 +14694,7 @@ textarea {
   padding: 0.9375rem;
   font-weight: 400;
   font-size: 21px;
+  float: right;
   text-transform: uppercase;
   border-radius: 3px;
   line-height: 20px;
@@ -18454,45 +18454,9 @@ footer .pull-center {
     min-height: 400px;
   }
 
-  .navbar-collapse {
-    position: relative;
-   
-    top: 0px;
-    width: 150px;
-    left: 0;
-    margin-right: 0 !important;
-    z-index: 1032;
-    visibility: visible;
-    background-color: #999;
-    overflow-y: visible;
-    border-top: none;
-    text-align: left;
-    padding-right: 0;
-    padding-left: 0;
-    max-height: none !important;
-    -webkit-transform: translate3d(-850px, 0, 0);
-    -moz-transform: translate3d(-850px, 0, 0);
-    -o-transform: translate3d(-850px, 0, 0);
-    -ms-transform: translate3d(-850px, 0, 0);
-    transform: translate3d(-850px, 0, 0);
-    -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-  }
+  
 
-  .navbar-collapse::after {
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-color: #ffffff;
-    display: block;
-    content: "";
-    z-index: 1;
-  }
+ 
 
   .navbar-collapse .dropdown-toggle:after {
     position: absolute;
@@ -18506,8 +18470,9 @@ footer .pull-center {
   }
 
   .navbar-collapse .navbar-nav .nav-item .nav-link {
-    color: #000000;
-    margin: 5px 15px;
+    color: #faf8f8;
+    margin: 0px 0px;
+    padding: 13px 38px;
   }
 
   .navbar-collapse .navbar-nav .nav-item.active .nav-link,
@@ -18523,11 +18488,12 @@ footer .pull-center {
   }
 
   .navbar-collapse .navbar-nav .nav-item:after {
-    width: calc(100% - 30px);
+    width: calc(90% - 30px);
     content: "";
     display: block;
     height: 1px;
-    margin-left: 15px;
+    margin-right: 35px;
+    float: right;
     background-color: #e5e5e5;
   }
 
@@ -18678,7 +18644,9 @@ footer .pull-center {
     max-width: 170px;
     max-height: 120px;
   }
-
+  .navbar-nav{
+    background: #4d75d5;
+  }
   @keyframes topbar-x {
     0% {
       top: 0px;

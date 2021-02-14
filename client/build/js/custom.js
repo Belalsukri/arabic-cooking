@@ -14,25 +14,16 @@ function showModal(error, title, content) {
     $('#resultModal').show('modal')
   }
 //   function navColps() {
-//       let burger=document.querySelector('.navbar-toggler')
-//       let navAbaut =document.querySelector('.list-group')
-//       burger.addEventListener('click',function () {
-//            navAbaut.classList.toggle('hiden')
+//     let burger=document.querySelector('.navbar-collapse')
+//       let navAbaut =document.querySelectorAll('.nav-item ')
+      
+//       navAbaut.addEventListener('click',function () {
+       
+//         burger.classList.toggle('hiden ')
           
 //       })
   
 //   }
 //   navColps()
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
-// Or using the CommonJS version:
-// const ClassicEditor = require( '@ckeditor/ckeditor5-build-classic' );
 
-ClassicEditor
-	.create( document.querySelector( '#editor' ) )
-	.then( editor => {
-		window.editor = editor;
-	} )
-	.catch( error => {
-		console.error( 'There was a problem initializing the editor.', error );
-	} );

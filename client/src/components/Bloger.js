@@ -1,9 +1,11 @@
 import React,{useEffect,useState} from 'react'
 import {blogerPost} from '../services/api'
 import {Link,useParams} from 'react-router-dom'
+import parse from "html-react-parser"
+import { renderToString } from 'react-dom/server'
 
 const Bloger = ()=> {
-    
+ 
     const intialState={
         bloger:[]
       }
@@ -68,47 +70,64 @@ const Bloger = ()=> {
                 <h3 className="title text-center " id="projects">Nice food & sweet</h3>
                 <h4 className="text-center ">اهلا بكم في مدونتنا</h4>
 
-                <section className=' container  text-center card-blog' >
-             
-              <h3 className="card-header hed col-10 ">
+                <section className='  ' >
+               <div className=' ml-sm-5'>
+               
+            <div className="card card-plain card-blog  ">
+            <h3 className="card-title text-center">
                   {state.bloger.title}
                 </h3>
-                <div className=" col-md-8 ml-auto mr-auto ">
+                <div className="row">
+              <div className="container col-md-12">
+                <div className=" card-bloger col-md-12">
                 
                 {state.bloger.urlVideo!=='undefined' ?
-                    <div class="embed-responsive embed-responsive-4by3 img-blog" >
-                    <iframe title="myFrame" class="embed-responsive-item" height="80%"  src={state.bloger.urlVideo} frameborder="0" allow="accelerometer; autoplay;
+                    <div className='row justify-content-center'>
+                    <div class="embed-responsive embed-responsive-4by3 col-md-7 col-11 mt-3" >
+                    <iframe title="myFrame" class="embed-responsive-item"  height="60%"  src={state.bloger.urlVideo} frameborder="0" allow="accelerometer; autoplay;
                      clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                     </div> :
+                    <div className='row justify-content-center'>
+                      <div className='col-md-8'>
                     <Link to=''>
-                    <img className="img img-blog col-10"src={state.bloger.imgs[0]} alt="img"/>
-                  </Link>
+                    <img className="img img-bloger col-12"src={state.bloger.imgs[0]} alt="img"/>
+                    </Link>
+                    </div>
+                    </div>
                     }
                 
                 </div>
-              
-            
-               
-                
-                <h5 className="card-title">
+                <h5 className="card-title text-center">
                   {state.bloger.sumTitle}
                 </h5>
-                <p className="card-text">
-                {state.bloger.description}
+                <div className='row justify-content-center'> 
+                <div className='col-sm-8'>       
+               
+                
+                
+               
+                 
+                  {parse(`<ul  class='mr-2  p-1'>${state.bloger.description}</ul>`)}
                   
-                </p>
-                <p>{state.bloger.date } </p>
-                <p className="link-blog">
+                
+                  
+               
+                <p className='mr-2 '>{state.bloger.date } </p>
+                <p className="link-blog ">
                   
                   <Link to="{blog.urlBlog}">
-                    <b>{state.bloger.urlBlog}</b>
+                    <b >{state.bloger.urlBlog}</b>
                   </Link>
                 </p>
-                
-              
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
             </section>
-
-                {/* ............................... */}
+             
                 <section>
                 <div className="section section-contacts mb-5 " id="contact_me">
           <div className="row">
